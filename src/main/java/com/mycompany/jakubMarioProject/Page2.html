@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Test project</title>
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet'
+          type='text/css'/>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet"/>
+</head>
+<body>
+<div id="hd">
+
+</div>
+<div id="bd">
+    <h2>step2</h2>
+    <div wicket:id="feedback"></div>
+
+    <form wicket:id="step2">
+        <p>
+            <label>street</label>:
+            <input wicket:id="street" type="text" size="50"/>
+        </p>
+
+        <p>
+            <label>tel</label>:
+            <input wicket:id="tel" type="text" size="20"/>
+        </p>
+
+        <p>
+            <label>zip</label>:
+            <input wicket:id="zip" type="text" size="20"/>
+        </p>
+
+        <input type="submit" wicket:id="backButton" value="back" />
+        <input type="submit" wicket:id="step2Button" value="next" />
+    </form>
+
+</div>
+<div id="ft">
+</div>
+</body>
+</html>
