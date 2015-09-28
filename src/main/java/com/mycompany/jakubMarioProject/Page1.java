@@ -19,18 +19,17 @@ public class Page1 extends WebPage {
 
         final TextField<String> userName = new TextField<String>("username", new PropertyModel<String>(wizardData,"username"));
         final TextField<String> lastName = new TextField<String>("lastName", new PropertyModel<String>(wizardData,"lastname"));
-
         final TextField<String> birth = new TextField<String>("birth", new PropertyModel<String>(wizardData,"birth"));
         final TextField<String> email = new TextField<String>("email", new PropertyModel<String>(wizardData,"email"));
 
 
         birth.add(new BirtDateValidator());
         Form<?> form = new Form<Void>("step1") {
+
             @Override
             protected void onSubmit() {
-                final String usernameValue = wizardData.getUsername();
                 PageParameters pageParameters = new PageParameters();
-                pageParameters.set("username", usernameValue);
+                pageParameters.set("username", wizardData.getUsername());
                 pageParameters.set("lastname", wizardData.getLastname());
                 pageParameters.set("birth", wizardData.getBirth());
                 pageParameters.set("email", wizardData.getEmail());
@@ -38,12 +37,11 @@ public class Page1 extends WebPage {
             }
         };
         userName.setRequired(true);
-
-        add(form);
         form.add(userName);
         form.add(lastName);
         form.add(birth);
         form.add(email);
+        add(form);
     }
 
     private WizardData setFields(PageParameters parameters){
