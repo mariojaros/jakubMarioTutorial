@@ -43,6 +43,7 @@ public class Page2 extends WebPage {
         });
         form.add(new Button("backButton"){
             public void onSubmit() {
+
                 setResponsePage(Page1.class, parameters);
             }
         });
