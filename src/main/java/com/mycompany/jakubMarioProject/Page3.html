@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:wicket="http://wicket.apache.org" xmlns="http://www.w3.org/1999/html">
+<html xmlns:wicket="http://wicket.apache.org">
 <head>
     <meta charset="utf-8"/>
     <title>Test project</title>
@@ -13,20 +13,70 @@
 </div>
 <div id="bd">
     <h2>step3</h2>
-    <span wicket:id="username">Message goes here</span>
-    <br>
-    <span wicket:id="lastname">Message goes here</span>
-    <br>
-    <span wicket:id="birth">Message goes here</span>
-    <br>
-    <span wicket:id="email">Message goes here</span>
-    <br>
-    <span wicket:id="street">Message goes here</span>
-    <br>
-    <span wicket:id="tel">Message goes here</span>
-    <br>
-    <span wicket:id="zip">Message goes here</span>
-    <br>
+
+    <div wicket:id="feedback"></div>
+
+    <form wicket:id="step3">
+        <table>
+            <tr>
+                <td>
+                    <label>username:</label>
+                </td>
+                <td>
+                    <span wicket:id="usernameResult"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>lastName:</label>
+                </td>
+                <td>
+                    <span wicket:id="lastNameResult"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>birth:</label>
+                </td>
+                <td>
+                    <span wicket:id="birthResult"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>email:</label>
+                </td>
+                <td>
+                    <span wicket:id="emailResult"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>street:</label>
+                </td>
+                <td>
+                    <span wicket:id="streetResult"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>tel:</label>
+                </td>
+                <td>
+                    <span wicket:id="telResult"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>zip:</label>
+                </td>
+                <td>
+                    <span wicket:id="zipResult"></span>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" wicket:id="backButton" value="back"/>
+    </form>
 
 </div>
 <div id="ft">

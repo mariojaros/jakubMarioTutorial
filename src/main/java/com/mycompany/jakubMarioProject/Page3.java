@@ -2,37 +2,36 @@ package com.mycompany.jakubMarioProject;
 
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
+import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.Form;
-import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
-import org.apache.wicket.model.PropertyModel;
-import org.apache.wicket.request.mapper.parameter.INamedParameters;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 
-/**
- * Created by mariojaros on 25.9.15.
- */
 public class Page3 extends WebPage {
     private static final long serialVersionUID = 1L;
 
     public Page3(final PageParameters parameters) {
         super(parameters);
 
-        final WizardData wizardData = setFields(parameters);
+        add(new FeedbackPanel("feedback"));
 
-        for(INamedParameters.NamedPair param : parameters.getAllNamed()) {
-            add(new Label(param.getKey(),param.getValue()));
-        }
+        Form<?> form = new Form<Void>("step3");
 
-    }
+        add(form);
 
-    private WizardData setFields(PageParameters parameters){
-        WizardData wizardData = new WizardData();
-        wizardData.setLastname(parameters.get("lastname").toString());
-        wizardData.setUsername(parameters.get("username").toString());
-        wizardData.setBirth(parameters.get("birth").toString());
-        wizardData.setEmail(parameters.get("email").toString());
-        return wizardData;
+        form.add(new Label("usernameResult", Page1.getWizardData().getUsername()));
+        form.add(new Label("lastNameResult", Page1.getWizardData().getLastname()));
+        form.add(new Label("birthResult", Page1.getWizardData().getBirth()));
+        form.add(new Label("emailResult", Page1.getWizardData().getEmail()));
+
+        form.add(new Label("streetResult", Page1.getWizardData().getStreet()));
+        form.add(new Label("telResult", Page1.getWizardData().getTel()));
+        form.add(new Label("zipResult", Page1.getWizardData().getZip()));
+
+        form.add(new Button("backButton") {
+            public void onSubmit() {
+                setResponsePage(Page2.class, parameters);
+            }
+        });
     }
 }
-

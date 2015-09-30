@@ -2,23 +2,14 @@ package com.mycompany.jakubMarioProject;
 
 import java.io.Serializable;
 
-/**
- * Created by install on 24/9/2015.
- */
-public class WizardData implements Serializable{
+public class WizardData implements Serializable {
 
     private String username;
-
     private String lastname;
-
     private String birth;
-
     private String email;
-
     private String street;
-
     private String tel;
-
     private String zip;
 
     public String getLastname() {
