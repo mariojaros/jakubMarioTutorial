@@ -49,6 +49,7 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.eclipse.jetty:jetty-servlet:9.2.11.v20150529" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.eclipse.jetty:jetty-security:9.2.11.v20150529" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.eclipse.jetty:jetty-jmx:9.2.11.v20150529" level="project" />
+    <orderEntry type="library" name="sass-stdlib" level="application" />
   </component>
 </module>
 
