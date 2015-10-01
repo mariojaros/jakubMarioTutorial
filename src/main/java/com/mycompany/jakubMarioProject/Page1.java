@@ -27,6 +27,7 @@ public class Page1 extends WebPage {
         Form<?> form = new Form<Void>("step1") {
             @Override
             protected void onSubmit() {
+
                 setResponsePage(Page2.class, parameters);
             }
         };

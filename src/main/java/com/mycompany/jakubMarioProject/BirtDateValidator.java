@@ -16,7 +16,7 @@ public class BirtDateValidator implements IValidator<String> {
     public void validate(IValidatable<String> validatable) {
         String value = validatable.getValue();
 
-        Date date;
+        Date date = null;
         try {
             date = dateFormat.parse(value);
         } catch (ParseException e) {
@@ -25,8 +25,10 @@ public class BirtDateValidator implements IValidator<String> {
         }
 
         Date now = new Date();
+
         if (now.compareTo(date) < 0) {
             error(validatable, "youCantBornInFuture", "you cant born in future: " + dateFormat.format(date) + ", now is: " + dateFormat.format(now));
+            return;
         }
     }
 

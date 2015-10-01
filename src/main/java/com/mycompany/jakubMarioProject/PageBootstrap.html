@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:wicket="http://wicket.apache.org">
 <head lang="en">
-    <meta charset="utf-8"/>
-    <title>Test project</title>
+    <meta charset="UTF-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -11,20 +11,21 @@
     <link href="../../../../webapp/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../../../../webapp/css/grayscale.css" rel="stylesheet">
+    <link href="css/grayscale.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../../../../webapp/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
           type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+    <title>Bootstrap</title>
 </head>
 <body>
-
 
 <!-- Navigation -->
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -45,7 +46,7 @@
                     <a class="page-scroll" href="#about">About</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#">Register</a>
+                    <a class="page-scroll" href="#" wicket:id="register">Register</a>
                 </li>
             </ul>
         </div>
@@ -71,100 +72,28 @@
 </header>
 
 <section id="about" class="container content-section text-center">
-    <div id="bd">
-        <h2>step1</h2>
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>Senacor super developers</h2>
 
-        <div wicket:id="feedback"></div>
+           <a><p>Lukas bootstrap and wicket developer</p></a>
 
-        <form wicket:id="step1">
+            <p>Jakub wicket super developer</p>
 
-            <table>
-                <tr>
-                    <td>
-                        <label>username:</label>
-                    </td>
-                    <td>
-                        <input wicket:id="username" type="text" size="20"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>lastName:</label>
-                    </td>
-                    <td>
-                        <input wicket:id="lastName" type="text" size="20"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>birth:</label>
-                    </td>
-                    <td>
-                        <input wicket:id="birth" type="text" size="20"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>email:</label>
-                    </td>
-                    <td>
-                        <input wicket:id="email" type="text" size="20"/>
-                    </td>
-                </tr>
-            </table>
-            <input type="submit" value="next1"/>
-        </form>
+            <p>Mario wicket super developer</p>
         </div>
+    </div>
 </section>
 
-<!--<div id="bd2">
-    <h2>step1</h2>
+<!-- Map Section -->
+<div id="map"></div>
 
-    <div wicket:id="feedback"></div>
-
-    <form wicket:id="step1">
-
-        <table>
-            <tr>
-                <td>
-                    <label>username:</label>
-                </td>
-                <td>
-                    <input wicket:id="username" type="text" size="20"/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>lastName:</label>
-                </td>
-                <td>
-                    <input wicket:id="lastName" type="text" size="20"/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>birth:</label>
-                </td>
-                <td>
-                    <input wicket:id="birth" type="text" size="20"/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>email:</label>
-                </td>
-                <td>
-                    <input wicket:id="email" type="text" size="20"/>
-                </td>
-            </tr>
-        </table>
-        <input type="submit" value="next1"/>
-    </form>
-
-</div>
--->
-<div id="ft">
-</div>
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p>Copyright &copy; Senacor boys</p>
+    </div>
+</footer>
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
