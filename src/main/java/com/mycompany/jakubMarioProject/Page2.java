@@ -19,7 +19,7 @@ public class Page2 extends WebPage {
         final TextField<String> street = new TextField<String>("street", new PropertyModel<String>(Page1.getWizardData(), "street"));
         final TextField<String> tel = new TextField<String>("tel", new PropertyModel<String>(Page1.getWizardData(), "tel"));
         final TextField<String> zip = new TextField<String>("zip", new PropertyModel<String>(Page1.getWizardData(), "zip"));
-        street.setRequired(true);
+        //street.setRequired(true);
         zip.add(new ZipValidator());
 
         Form<?> form = new Form<Void>("step2");
@@ -29,7 +29,9 @@ public class Page2 extends WebPage {
         form.add(zip);
         form.add(new Button("step2Button") {
             public void onSubmit() {
-                setResponsePage(Page3.class, parameters);
+                if (Page1.getWizardData().getStreet() != null) {
+                    setResponsePage(Page3.class, parameters);
+                }
             }
         });
 
