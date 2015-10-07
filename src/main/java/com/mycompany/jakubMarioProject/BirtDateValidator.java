@@ -24,6 +24,7 @@ public class BirtDateValidator implements IValidator<String> {
             return;
         }
 
+		//date
         Date now = new Date();
 
         if (now.compareTo(date) < 0) {
